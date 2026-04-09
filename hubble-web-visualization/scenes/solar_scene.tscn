@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://8yaf13ad4mr"]
+
+[ext_resource type="Environment" uid="uid://bivv4g2metxle" path="res://textures/skybox/space_skybox.tres" id="1_aepc0"]
+[ext_resource type="PackedScene" uid="uid://dx17tj82r4y0s" path="res://models/Hubble.glb" id="2_0edrp"]
+[ext_resource type="Texture2D" uid="uid://c4ndkvwpqrxyh" path="res://textures/sun/Sun.jpg" id="2_kjixj"]
+[ext_resource type="Script" uid="uid://c8utimw2jm1b0" path="res://orbit.gd" id="2_vec4o"]
+[ext_resource type="PackedScene" uid="uid://pxfj7qc12rgj" path="res://scenes/camera_rig.tscn" id="3_ykdgm"]
+[ext_resource type="PackedScene" uid="uid://bqb1lay6k1qax" path="res://models/scene.gltf" id="6_vec4o"]
+[ext_resource type="PackedScene" uid="uid://b3oq3vaobxepd" path="res://scenes/earth.tscn" id="6_ykdgm"]
+[ext_resource type="Script" uid="uid://1g8qnhudwxu8" path="res://scenes/sun_light_tracking.gd" id="7_ykdgm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vec4o"]
+shading_mode = 0
+albedo_texture = ExtResource("2_kjixj")
+
+[sub_resource type="SphereMesh" id="SphereMesh_aepc0"]
+material = SubResource("StandardMaterial3D_vec4o")
+radius = 50.0
+height = 100.0
+
+[node name="World" type="Node3D" unique_id=1053880755]
+
+[node name="CameraOrigin" type="Node3D" parent="." unique_id=253204638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 300, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=926567312]
+environment = ExtResource("1_aepc0")
+
+[node name="Sun" type="Node3D" parent="." unique_id=44041789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3000)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sun" unique_id=1622138125]
+mesh = SubResource("SphereMesh_aepc0")
+
+[node name="OrbitComponent" type="Node3D" parent="Sun" unique_id=2142703094 node_paths=PackedStringArray("pivot_point", "object")]
+script = ExtResource("2_vec4o")
+speed = 0.001
+pivot_point = NodePath("../..")
+object = NodePath("..")
+metadata/_custom_type_script = "uid://c8utimw2jm1b0"
+
+[node name="CameraRig" parent="." unique_id=606405751 node_paths=PackedStringArray("targets") instance=ExtResource("3_ykdgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 0, 0)
+targets = {
+"Hubble": NodePath("../HubbleNode"),
+"Origin": NodePath("../CameraOrigin"),
+"Webb": NodePath("../WebbNode")
+}
+init_target = "Origin"
+
+[node name="HubbleNode" type="Node3D" parent="." unique_id=1097987059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 0, 0)
+
+[node name="OrbitComponent" type="Node3D" parent="HubbleNode" unique_id=1949742246 node_paths=PackedStringArray("pivot_point", "object")]
+script = ExtResource("2_vec4o")
+speed = 0.024
+pivot_point = NodePath("../..")
+object = NodePath("..")
+metadata/_custom_type_script = "uid://c8utimw2jm1b0"
+
+[node name="Hubble" parent="HubbleNode" unique_id=535562204 instance=ExtResource("2_0edrp")]
+
+[node name="Lights" type="Node3D" parent="HubbleNode" unique_id=942801861]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HubbleNode/Lights" unique_id=414102020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="HubbleNode/Lights" unique_id=1567412543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="WebbNode" type="Node3D" parent="." unique_id=559544165]
+transform = Transform3D(1.9106853e-15, 4.3711385e-08, -0.9999999, 0.9999999, -4.3711385e-08, 0, -4.3711385e-08, -0.9999999, -4.3711385e-08, 0, 0, -500)
+
+[node name="Lights" type="Node3D" parent="WebbNode" unique_id=188622592]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WebbNode/Lights" unique_id=876106610]
+transform = Transform3D(1.0000001, 3.5527137e-15, -2.1175824e-22, -3.5527137e-15, 1.0000001, -3.5527137e-15, -2.1175824e-22, 3.5527137e-15, 1.0000001, 3.1473064e-07, 15, 17.000002)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="WebbNode/Lights" unique_id=1584096381]
+transform = Transform3D(1.0000001, 3.5527137e-15, -2.1175824e-22, -3.5527137e-15, 1.0000001, -3.5527137e-15, -2.1175824e-22, 3.5527137e-15, 1.0000001, 3.1473064e-07, 15, -16.999998)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="WebbNode/Lights" unique_id=1323290881]
+transform = Transform3D(1.0000001, 7.1054274e-15, 0, -7.1054274e-15, 1.0000001, -7.1054274e-15, -2.1175824e-22, 7.1054274e-15, 1.0000001, -8.2280167e-07, -15, 17)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="WebbNode/Lights" unique_id=1511650289]
+transform = Transform3D(1.0000001, 7.1054274e-15, 0, -7.1054274e-15, 1.0000001, -7.1054274e-15, -2.1175824e-22, 7.1054274e-15, 1.0000001, -8.2280167e-07, -15, -17)
+shadow_enabled = true
+omni_range = 25.0
+
+[node name="WebbModel" parent="WebbNode" unique_id=753337216 instance=ExtResource("6_vec4o")]
+
+[node name="Earth" parent="." unique_id=648042837 node_paths=PackedStringArray("light") instance=ExtResource("6_ykdgm")]
+light = NodePath("../SunLight")
+
+[node name="SunLight" type="DirectionalLight3D" parent="." unique_id=189654690 node_paths=PackedStringArray("sun")]
+transform = Transform3D(0.6104494, 0, 0.7920553, 0, 1, 0, -0.7920553, 0, 0.6104494, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_max_distance = 5000.0
+script = ExtResource("7_ykdgm")
+sun = NodePath("../Sun")

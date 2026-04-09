@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b3oq3vaobxepd"]
+
+[ext_resource type="Script" uid="uid://ccyu5ii7ubopp" path="res://scripts/earth.gd" id="1_78p35"]
+[ext_resource type="Shader" uid="uid://bqjheeult2npj" path="res://shaders/earth_shader.gdshader" id="2_yhjmp"]
+[ext_resource type="Texture2D" uid="uid://ba1canf4125t2" path="res://textures/earth/Earth_Clouds.jpg" id="3_8otvb"]
+[ext_resource type="Texture2D" uid="uid://dx18gyma1jbrm" path="res://textures/earth/Earth_Day.jpg" id="4_videg"]
+[ext_resource type="Texture2D" uid="uid://ocrg5p1gjmwg" path="res://textures/earth/Earth_Night.jpg" id="5_te4mb"]
+[ext_resource type="Texture2D" uid="uid://bullajamw6y4l" path="res://textures/earth/Earth_Specular.jpg" id="6_drirb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oimtn"]
+render_priority = 0
+shader = ExtResource("2_yhjmp")
+shader_parameter/day_texture = ExtResource("4_videg")
+shader_parameter/night_texture = ExtResource("5_te4mb")
+shader_parameter/cloud_texture = ExtResource("3_8otvb")
+shader_parameter/specular_map = ExtResource("6_drirb")
+shader_parameter/light_direction = Vector3(0, 0, 0)
+shader_parameter/blend_smoothness = 0.05
+shader_parameter/cloud_opacity = 0.9
+shader_parameter/cloud_speed = 0.002
+shader_parameter/earth_speed = 0.002
+shader_parameter/night_side_brightness = 66.0
+shader_parameter/day_side_brightness = 6.0
+shader_parameter/night_cloud_visibility = 0.82
+
+[sub_resource type="SphereMesh" id="SphereMesh_rmwp3"]
+material = SubResource("ShaderMaterial_oimtn")
+radius = 100.0
+height = 200.0
+
+[node name="Earth" type="Node3D" unique_id=648042837 node_paths=PackedStringArray("earth_material")]
+script = ExtResource("1_78p35")
+earth_material = NodePath("MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1917577582]
+mesh = SubResource("SphereMesh_rmwp3")
