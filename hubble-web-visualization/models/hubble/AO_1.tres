@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co3dn0q8hihwx"]
+
+[ext_resource type="Texture2D" uid="uid://dbtomubw5m3w2" path="res://models/hubble/Hubble_hubble_AO_1.png" id="1_dlg1k"]
+
+[resource]
+resource_name = "AO_1"
+albedo_texture = ExtResource("1_dlg1k")
+metallic = 1.0
+roughness = 0.4

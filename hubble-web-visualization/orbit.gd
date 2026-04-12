@@ -1,16 +1,18 @@
 class_name OrbitComponent extends Node3D
 
 @export_category("Orbit Infromation")
-@export var speed = PI / 256
+@export var speed: float = PI / 256
+@export var up_vector: Vector3 = Vector3.UP
 @export var pivot_point: Node3D = null
 @export var object: Node3D = null
+@export var rotate_object: bool = false
 
 func _ready() -> void:
 	if not object:
 		object = get_parent()
 
 func _physics_process(delta: float) -> void:
-	rotate_around(pivot_point.global_position, Vector3.UP, speed * delta)
+	rotate_around(pivot_point.global_position, up_vector, speed * delta)
 
 func rotate_around(pivot, axis, angle):
 	object.global_transform.origin -= pivot

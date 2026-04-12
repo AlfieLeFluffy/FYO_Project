@@ -25,14 +25,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="4.1071318"
-     inkscape:cx="64.156694"
-     inkscape:cy="100.19157"
+     inkscape:cx="45.165339"
+     inkscape:cy="101.16549"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="false" />
   <defs
      id="defs1">
     <linearGradient
@@ -190,22 +191,6 @@
      transform="translate(-44.614549,-29.219137)">
     <path
        sodipodi:type="star"
-       style="fill:url(#linearGradient176);stroke-width:0.264583"
-       id="path1"
-       inkscape:flatsided="true"
-       sodipodi:sides="6"
-       sodipodi:cx="43.821167"
-       sodipodi:cy="42.819019"
-       sodipodi:r1="11.852315"
-       sodipodi:r2="10.264406"
-       sodipodi:arg1="0.52359878"
-       sodipodi:arg2="1.0471976"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 54.085573,48.745177 -10.264406,5.926157 -10.264406,-5.926157 0,-11.852315 10.264406,-5.926158 10.264406,5.926158 z"
-       transform="translate(32.057788,16.352433)" />
-    <path
-       sodipodi:type="star"
        style="fill:url(#linearGradient181);stroke-width:0.264583"
        id="path2"
        inkscape:flatsided="true"
@@ -302,19 +287,20 @@
        transform="translate(21.557788,34.457433)" />
     <path
        sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-       id="path15"
+       style="fill:#666666;stroke-width:0.264583"
+       id="path1"
        inkscape:flatsided="false"
-       sodipodi:sides="4"
-       sodipodi:cx="69.850441"
-       sodipodi:cy="53.361774"
-       sodipodi:r1="23.679126"
-       sodipodi:r2="1.275658"
-       sodipodi:arg1="-1.5967871"
-       sodipodi:arg2="-0.81138895"
+       sodipodi:sides="6"
+       sodipodi:cx="69.158745"
+       sodipodi:cy="52.088402"
+       sodipodi:r1="10.81228"
+       sodipodi:r2="6.4534855"
+       sodipodi:arg1="2.0744226"
+       sodipodi:arg2="3.5771938"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       d="m 69.235071,29.690645 1.49365,22.745966 22.792849,0.309794 -22.745966,1.493649 -0.309793,22.79285 -1.49365,-22.745966 -22.792849,-0.309794 22.745965,-1.49365 z" />
+       d="m 63.940687,61.55821 -0.632779,-12.192892 -4.959286,2.939018 10.242964,-6.644449 -5.024907,-2.82536 10.875744,5.548443 -0.06562,-5.764377 0.63278,12.192892 4.959286,-2.939017 -10.242964,6.644449 5.024907,2.825359 -10.875744,-5.548443 z"
+       transform="translate(6.8285691,7.0776573)" />
   </g>
   <g
      inkscape:label="Layer 1 copy"

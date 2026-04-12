@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bab58p4v25lli"]
+
+[ext_resource type="Shader" uid="uid://b2d3f13tk7br5" path="res://shaders/fill_section.gdshader" id="1_twipf"]
+[ext_resource type="Shader" uid="uid://tscufkjruimt" path="res://shaders/cross_section.gdshader" id="2_51gwf"]
+
+[sub_resource type="Gradient" id="Gradient_k5uey"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yrcwa"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cr7fg"]
+noise = SubResource("FastNoiseLite_yrcwa")
+color_ramp = SubResource("Gradient_k5uey")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dxuop"]
+render_priority = 2
+shader = ExtResource("1_twipf")
+shader_parameter/cutplane = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/s_noise = SubResource("NoiseTexture2D_cr7fg")
+
+[resource]
+render_priority = 1
+next_pass = SubResource("ShaderMaterial_dxuop")
+shader = ExtResource("2_51gwf")
+shader_parameter/cutplane = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/border_color = Color(0, 0, 0, 1)

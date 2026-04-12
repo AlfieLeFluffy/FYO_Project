@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bg7a7sua83pw7"]
+
+[ext_resource type="Texture2D" uid="uid://uo54bp53d8ea" path="res://models/hubble/Hubble_clear.png.png" id="1_k6h1h"]
+
+[resource]
+resource_name = "transparent"
+transparency = 4
+albedo_texture = ExtResource("1_k6h1h")
+roughness = 0.5

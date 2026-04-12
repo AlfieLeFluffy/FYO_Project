@@ -25,8 +25,8 @@ shader_parameter/night_cloud_visibility = 0.82
 
 [sub_resource type="SphereMesh" id="SphereMesh_rmwp3"]
 material = SubResource("ShaderMaterial_oimtn")
-radius = 100.0
-height = 200.0
+radius = 637.0
+height = 1274.0
 
 [node name="Earth" type="Node3D" unique_id=648042837 node_paths=PackedStringArray("earth_material")]
 script = ExtResource("1_78p35")

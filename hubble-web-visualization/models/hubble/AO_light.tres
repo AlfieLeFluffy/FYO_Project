@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2w0mykqlxyv6"]
+
+[ext_resource type="Texture2D" uid="uid://d1o6yirylwjnq" path="res://models/hubble/Hubble_hubble_AO_light.png" id="1_nvd3v"]
+
+[resource]
+resource_name = "AO_light"
+albedo_texture = ExtResource("1_nvd3v")
+roughness = 0.5

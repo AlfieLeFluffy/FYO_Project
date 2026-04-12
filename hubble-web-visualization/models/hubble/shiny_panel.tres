@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgg271rwryhd5"]
+
+[ext_resource type="Texture2D" uid="uid://eo4ko1omdmml" path="res://models/hubble/Hubble_hubble_tex_01_4.png" id="1_km4g7"]
+
+[resource]
+resource_name = "shiny_panel"
+albedo_texture = ExtResource("1_km4g7")
+metallic = 1.0
+roughness = 0.1
+emission_enabled = true

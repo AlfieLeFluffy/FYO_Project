@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://cvq20a24fthq0"]
+
+[ext_resource type="PackedScene" uid="uid://pxfj7qc12rgj" path="res://scenes/camera_rig.tscn" id="1_adt64"]
+[ext_resource type="PackedScene" uid="uid://dp85v5reysrmo" path="res://scenes/webb_scene.tscn" id="1_tgljk"]
+[ext_resource type="Script" uid="uid://bjjaiev5kivwo" path="res://scripts/pedestal_view_controller.gd" id="1_xqrev"]
+[ext_resource type="PackedScene" uid="uid://dkwulegauj0wa" path="res://scenes/hubble_scene.tscn" id="2_iuu4v"]
+[ext_resource type="PackedScene" uid="uid://dekdhtk4sfuc" path="res://models/platform/platform.glb" id="2_l1lag"]
+[ext_resource type="Environment" uid="uid://bivv4g2metxle" path="res://textures/skybox/space_skybox.tres" id="4_o0la1"]
+[ext_resource type="PackedScene" uid="uid://b1a2wdbdvssgo" path="res://scenes/ui_scene.tscn" id="8_0m80h"]
+[ext_resource type="PackedScene" uid="uid://qc6elosvd18g" path="res://models/reference/car/free_1975_porsche_911_930_turbo.glb" id="8_uy4js"]
+[ext_resource type="PackedScene" uid="uid://by88dotapsj45" path="res://models/reference/table/folding_table.glb" id="9_l1lag"]
+[ext_resource type="PackedScene" uid="uid://tvjc3y4ldhqt" path="res://scenes/reference/reference_human.tscn" id="9_uy4js"]
+[ext_resource type="PackedScene" uid="uid://4o2lxtos730a" path="res://models/reference/pallet/low_poly__pallets.glb" id="10_xqrev"]
+
+[node name="PedestalView" type="Node3D" unique_id=1743391473]
+script = ExtResource("1_xqrev")
+
+[node name="CameraRig" parent="." unique_id=606405751 node_paths=PackedStringArray("targets") instance=ExtResource("1_adt64")]
+targets = {
+"Hubble": NodePath("../Models/HubbleNode/CameraOriginHubble"),
+"Origin": NodePath("../CameraOriginEmpty"),
+"Webb": NodePath("../Models/WebbNode/CameraOriginWebb")
+}
+init_target = "Origin"
+
+[node name="CameraOriginEmpty" type="Node3D" parent="." unique_id=982871709]
+
+[node name="Pedestal" type="Node3D" parent="." unique_id=247505505]
+
+[node name="platform" parent="Pedestal" unique_id=1312393531 instance=ExtResource("2_l1lag")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Models" type="Node3D" parent="." unique_id=561062811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9595456, 0)
+
+[node name="WebbNode" parent="Models" unique_id=2138413496 instance=ExtResource("1_tgljk")]
+unique_name_in_owner = true
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 3.5811176, 0)
+visible = false
+
+[node name="CameraOriginWebb" type="Node3D" parent="Models/WebbNode" unique_id=1610501051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="HubbleNode" parent="Models" unique_id=723321432 instance=ExtResource("2_iuu4v")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+visible = false
+
+[node name="CameraOriginHubble" type="Node3D" parent="Models/HubbleNode" unique_id=1850943613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.0000005, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1814474714]
+environment = ExtResource("4_o0la1")
+
+[node name="SunLight" type="DirectionalLight3D" parent="." unique_id=2077418721]
+transform = Transform3D(1, 0, 0, 0, -0.5, -0.8660253, 0, 0.8660253, -0.5, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Lights" type="Node3D" parent="." unique_id=683261015]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1392194440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0)
+light_energy = 5.0
+omni_range = 40.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=778248064]
+transform = Transform3D(-0.70710677, 0.2988363, 0.64085644, 0, 0.9063078, -0.4226183, -0.7071068, -0.29883626, -0.6408564, 14.142136, 6, -14.142136)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 25.0
+spot_angle = 65.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=1471879128]
+transform = Transform3D(0.7071068, -0.29883626, -0.6408564, 0, 0.9063078, -0.4226183, 0.70710677, 0.2988363, 0.64085644, -14.142136, 6, 14.142136)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 25.0
+spot_angle = 65.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=1675805353]
+transform = Transform3D(0.7071069, 0.29883626, 0.6408563, -3.5527135e-15, 0.9063078, -0.42261833, -0.7071067, 0.29883635, 0.6408565, 14.142135, 6, 14.142137)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 25.0
+spot_angle = 65.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=687388192]
+transform = Transform3D(-0.7071068, -0.29883626, -0.6408563, 0, 0.90630776, -0.4226183, 0.70710677, -0.2988363, -0.6408564, -14.142135, 6, -14.142137)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 25.0
+spot_angle = 65.0
+
+[node name="References" type="Node3D" parent="." unique_id=1771477958]
+unique_name_in_owner = true
+
+[node name="ReferenceHuman" parent="References" unique_id=2081590851 instance=ExtResource("9_uy4js")]
+transform = Transform3D(0.833934, 0, 0.5518642, 0, 1, 0, -0.5518642, 0, 0.833934, -12.741838, 0.21081984, 0)
+
+[node name="ReferenceHuman2" parent="References" unique_id=449901014 instance=ExtResource("9_uy4js")]
+transform = Transform3D(-0.4431807, 0, 0.8964323, 0, 1, 0, -0.8964323, 0, -0.4431807, -13.071875, 0.21081984, 1.7160215)
+
+[node name="Porche" parent="References" unique_id=1281579751 instance=ExtResource("8_uy4js")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 12, 0, 2)
+
+[node name="Sketchfab_Scene" parent="References" unique_id=1674698832 instance=ExtResource("9_l1lag")]
+transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, -12, 0.5, 1)
+
+[node name="Sketchfab_Scene2" parent="References" unique_id=955751171 instance=ExtResource("10_xqrev")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 13, 0, -3)
+
+[node name="UI" parent="." unique_id=1506250973 instance=ExtResource("8_0m80h")]
+unique_name_in_owner = true

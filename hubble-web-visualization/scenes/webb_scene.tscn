@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dp85v5reysrmo"]
+
+[ext_resource type="Script" uid="uid://qq2mxifwv2x5" path="res://scripts/model_node_controller.gd" id="1_iqucx"]
+[ext_resource type="PackedScene" uid="uid://b3fb31lwv0l5d" path="res://models/webb/webb_inhereted.tscn" id="2_iqucx"]
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="2_ymy23"]
+
+[sub_resource type="Resource" id="Resource_qdnt5"]
+script = ExtResource("2_ymy23")
+ref_name = "James Webb Space Telescope"
+ref_desc = "Testing"
+wavelength_low = 600.0
+wavelength_high = 2800.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
+
+[node name="WebbNode" type="Node3D" unique_id=2138413496]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0)
+script = ExtResource("1_iqucx")
+modelname = "Webb"
+ref_resourece = SubResource("Resource_qdnt5")
+
+[node name="WebbInhereted" parent="." unique_id=1958385789 instance=ExtResource("2_iqucx")]

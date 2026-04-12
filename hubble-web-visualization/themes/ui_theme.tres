@@ -1,0 +1,80 @@
+[gd_resource type="Theme" format=3 uid="uid://2ua8ba0tn3qk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgyi5"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 16
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxbg1"]
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfhtu"]
+bg_color = Color(0.3180198, 0.31801978, 0.3180198, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 16
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="DPITexture" id="DPITexture_pgyi5"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_xxbg1"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_gfhtu"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa7hf"]
+bg_color = Color(0.8474744, 0.84747446, 0.8474743, 1)
+border_width_top = 3
+border_width_bottom = 3
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkgan"]
+bg_color = Color(0.40392157, 0.40392157, 0.40392157, 0.5882353)
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0.8, 0.8, 0.8, 0.78431374)
+expand_margin_left = 15.0
+expand_margin_top = 35.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxFlat_pgyi5")
+Button/styles/normal = SubResource("StyleBoxFlat_xxbg1")
+Button/styles/pressed = SubResource("StyleBoxFlat_gfhtu")
+HSlider/icons/grabber = SubResource("DPITexture_pgyi5")
+HSlider/icons/grabber_disabled = SubResource("DPITexture_xxbg1")
+HSlider/icons/grabber_highlight = SubResource("DPITexture_gfhtu")
+HSlider/styles/slider = SubResource("StyleBoxFlat_qa7hf")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 4
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_jkgan")

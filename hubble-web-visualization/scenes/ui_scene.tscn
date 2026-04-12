@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://b1a2wdbdvssgo"]
+
+[ext_resource type="Theme" uid="uid://c5d1i7dl65uae" path="res://themes/main_menu_theme.tres" id="1_b2wvb"]
+[ext_resource type="Theme" uid="uid://2ua8ba0tn3qk" path="res://themes/ui_theme.tres" id="1_uymlc"]
+[ext_resource type="Script" uid="uid://jhtbc6me6777" path="res://scripts/main_menu_controller.gd" id="2_uymlc"]
+[ext_resource type="Theme" uid="uid://dkl3d2bykfbed" path="res://themes/window_theme.tres" id="3_8ysb5"]
+[ext_resource type="Script" uid="uid://cqrrpid1n88it" path="res://scripts/wavelength_controller.gd" id="5_7onhe"]
+[ext_resource type="Texture2D" uid="uid://cn6rbsgwyykvm" path="res://textures/spectrum/spectrum_gradient.tres" id="6_lnhyo"]
+[ext_resource type="Texture2D" uid="uid://gfkhe0yylha7" path="res://textures/spectrum/overlay.png" id="7_rrc76"]
+
+[sub_resource type="Gradient" id="Gradient_7onhe"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.74138474, 0.7413847, 0.74138457, 0.5882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lnhyo"]
+gradient = SubResource("Gradient_7onhe")
+width = 800
+
+[node name="UI" type="Control" unique_id=1506250973 groups=["UI"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_uymlc")
+
+[node name="Controls" type="VBoxContainer" parent="." unique_id=760893220]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -76.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2
+
+[node name="ActionLabel" type="RichTextLabel" parent="Controls" unique_id=1915252579]
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=white]LMB: [color=white]Action"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="PanZoomLabel" type="RichTextLabel" parent="Controls" unique_id=1870334377]
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=white]MMB: [color=white]Pan/Zoom"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="AdjustLabel" type="RichTextLabel" parent="Controls" unique_id=2037773831]
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=white]RMB: [color=white]Adjust Up/Down"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="MainMenu" type="MenuBar" parent="." unique_id=565046685 node_paths=PackedStringArray("menu_popup", "models_popup", "view_popup")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 56.0
+grow_horizontal = 2
+mouse_filter = 1
+theme = ExtResource("1_b2wvb")
+script = ExtResource("2_uymlc")
+menu_popup = NodePath("Menu")
+models_popup = NodePath("Models")
+view_popup = NodePath("View")
+
+[node name="Menu" type="PopupMenu" parent="MainMenu" unique_id=1425872998]
+item_count = 2
+item_0/text = "Reset"
+item_0/id = 1
+item_1/text = "Quit"
+item_1/id = 0
+
+[node name="Models" type="PopupMenu" parent="MainMenu" unique_id=1059658288]
+item_count = 3
+item_0/text = "Empty"
+item_0/id = 0
+item_1/text = "Hubble"
+item_1/id = 1
+item_2/text = "James Webb"
+item_2/id = 2
+
+[node name="View" type="PopupMenu" parent="MainMenu" unique_id=2003731691]
+item_count = 6
+item_0/text = "References"
+item_0/checkable = 1
+item_0/checked = true
+item_0/id = 0
+item_1/text = "Information"
+item_1/checkable = 1
+item_1/checked = true
+item_1/id = 1
+item_2/text = "Light Paths"
+item_2/checkable = 1
+item_2/id = 2
+item_3/id = 3
+item_3/separator = true
+item_4/text = "Cross-Section"
+item_4/id = 4
+item_5/text = "Wavelength"
+item_5/id = 5
+
+[node name="CrossSectionWindow" type="Window" parent="." unique_id=1325548252]
+unique_name_in_owner = true
+transparent_bg = true
+oversampling_override = 1.0
+title = "Cross-Section"
+position = Vector2i(50, 150)
+size = Vector2i(450, 180)
+visible = false
+wrap_controls = true
+transparent = true
+unfocusable = true
+popup_window = true
+sharp_corners = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CrossSectionWindow" unique_id=1176523111]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_8ysb5")
+alignment = 1
+
+[node name="CrossSectionLabel" type="Label" parent="CrossSectionWindow/VBoxContainer" unique_id=2131985041]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Adjust the sliders to update the cross-section depth."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CrossSectionWindow/VBoxContainer" unique_id=221751852]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CrossSectionWindow/VBoxContainer/MarginContainer" unique_id=1729023707]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="CrossSectionLabel" type="Label" parent="CrossSectionWindow/VBoxContainer/MarginContainer/VBoxContainer" unique_id=362768887]
+layout_mode = 2
+text = "Distance:"
+
+[node name="DistanceCrossSectionSlider" type="HSlider" parent="CrossSectionWindow/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1501830433]
+layout_mode = 2
+min_value = -8.0
+max_value = 8.0
+step = 0.1
+value = 8.0
+tick_count = 7
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CrossSectionWindow/VBoxContainer" unique_id=1036257980]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CrossSectionWindow/VBoxContainer/MarginContainer2" unique_id=658260488]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="CrossSectionLabel" type="Label" parent="CrossSectionWindow/VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1025164308]
+layout_mode = 2
+text = "Angle"
+
+[node name="AngleSectionSlider" type="HSlider" parent="CrossSectionWindow/VBoxContainer/MarginContainer2/VBoxContainer" unique_id=320280644]
+layout_mode = 2
+max_value = 3.6
+step = 0.05
+tick_count = 7
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="InformationWindow" type="Window" parent="." unique_id=642293679]
+unique_name_in_owner = true
+transparent_bg = true
+oversampling_override = 1.0
+title = "Information"
+position = Vector2i(1320, 100)
+size = Vector2i(500, 150)
+visible = false
+wrap_controls = true
+transparent = true
+unfocusable = true
+popup_window = true
+sharp_corners = true
+
+[node name="InformationLabel" type="RichTextLabel" parent="InformationWindow" unique_id=1873424565]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Here is the info."
+fit_content = true
+
+[node name="WaveLengthWindow" type="Window" parent="." unique_id=1856836592]
+unique_name_in_owner = true
+transparent_bg = true
+oversampling_override = 1.0
+title = "Current Wavelength"
+position = Vector2i(50, 800)
+size = Vector2i(800, 180)
+visible = false
+wrap_controls = true
+transparent = true
+unfocusable = true
+popup_window = true
+sharp_corners = true
+
+[node name="Control" type="Control" parent="WaveLengthWindow" unique_id=498198207]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WaveLengthWindow/Control" unique_id=312184729]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_8ysb5")
+alignment = 1
+
+[node name="WavelengthLabel" type="RichTextLabel" parent="WaveLengthWindow/Control/VBoxContainer" unique_id=94649010]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Here is the wavelength."
+fit_content = true
+horizontal_alignment = 1
+
+[node name="WavelengthContainer" type="MarginContainer" parent="WaveLengthWindow/Control/VBoxContainer" unique_id=1964581671]
+layout_mode = 2
+script = ExtResource("5_7onhe")
+
+[node name="WavelengthLeft" type="TextureProgressBar" parent="WaveLengthWindow/Control/VBoxContainer/WavelengthContainer" unique_id=403232640]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+min_value = 1.0
+max_value = 2500.0
+value = 450.0
+texture_under = ExtResource("6_lnhyo")
+texture_progress = SubResource("GradientTexture2D_lnhyo")
+
+[node name="WavelengthRight" type="TextureProgressBar" parent="WaveLengthWindow/Control/VBoxContainer/WavelengthContainer" unique_id=2034933337]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+min_value = 1.0
+max_value = 2500.0
+value = 1750.0
+fill_mode = 1
+texture_over = ExtResource("7_rrc76")
+texture_progress = SubResource("GradientTexture2D_lnhyo")
+
+[connection signal="index_pressed" from="MainMenu/Menu" to="MainMenu" method="_on_menu_index_pressed"]
+[connection signal="index_pressed" from="MainMenu/Models" to="MainMenu" method="_on_models_index_pressed"]
+[connection signal="index_pressed" from="MainMenu/View" to="MainMenu" method="_on_view_index_pressed"]
+[connection signal="close_requested" from="CrossSectionWindow" to="MainMenu" method="_on_cross_section_window_close_requested"]
+[connection signal="value_changed" from="CrossSectionWindow/VBoxContainer/MarginContainer/VBoxContainer/DistanceCrossSectionSlider" to="MainMenu" method="_on_cross_section_slider_value_changed"]
+[connection signal="value_changed" from="CrossSectionWindow/VBoxContainer/MarginContainer2/VBoxContainer/AngleSectionSlider" to="MainMenu" method="_on_angle_section_slider_value_changed"]
+[connection signal="close_requested" from="InformationWindow" to="MainMenu" method="_on_information_window_close_requested"]
+[connection signal="close_requested" from="WaveLengthWindow" to="MainMenu" method="_on_wave_length_window_close_requested"]

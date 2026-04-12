@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dkwulegauj0wa"]
+
+[ext_resource type="Script" uid="uid://qq2mxifwv2x5" path="res://scripts/model_node_controller.gd" id="1_314wi"]
+[ext_resource type="PackedScene" uid="uid://blt4n3trbgiak" path="res://models/hubble/hubble_inhereted.tscn" id="2_314wi"]
+[ext_resource type="Script" uid="uid://dfdkuksi32k3c" path="res://scripts/ui_reference.gd" id="3_uj1ad"]
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="4_jo82m"]
+
+[sub_resource type="Resource" id="Resource_7dd3f"]
+script = ExtResource("4_jo82m")
+ref_name = "Hubble Space Telescope"
+ref_desc = "Testing"
+wavelength_low = 90.0
+wavelength_high = 2400.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
+
+[sub_resource type="Resource" id="Resource_0nx12"]
+script = ExtResource("4_jo82m")
+ref_name = "Secondary Mirror"
+ref_desc = "The secondary mirror is small."
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
+
+[sub_resource type="Resource" id="Resource_jo82m"]
+script = ExtResource("4_jo82m")
+ref_name = "Advanced Camera for Surveys"
+ref_desc = "The ACS is the third generation (older) camera instrument currently on board, being installed in 2002 and serviced only partially since. It contains two main opti-
+cal paths and three main detectors with specific sensor, resolutions, and FOV information contained in table 2. The first path is the Wide Field Channel that uses
+a CCD sensors and is used for imaging in visible to near-IR light. The second path contains two separate sensors, the Solar Blind Channel detector and the High
+Resolution Channel detector. The HRC like the WFC used a CCD sensor, but with different resolutions and FOV, but unfortunately this channel is currently non-
+functional and it will most probably remain this way."
+wavelength_low = 115.0
+wavelength_high = 1100.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
+
+[node name="HubbleNode" type="Node3D" unique_id=723321432]
+script = ExtResource("1_314wi")
+modelname = "Hubble"
+ref_resourece = SubResource("Resource_7dd3f")
+
+[node name="HubbleInhereted" parent="." unique_id=1247401631 instance=ExtResource("2_314wi")]
+
+[node name="UIReference" type="Node3D" parent="." unique_id=365113430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7358038, 0)
+script = ExtResource("3_uj1ad")
+ref_resource = SubResource("Resource_0nx12")
+
+[node name="UIReference2" type="Node3D" parent="." unique_id=1658612256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8736814, -4.2229567, -1.8671427)
+script = ExtResource("3_uj1ad")
+ref_resource = SubResource("Resource_jo82m")

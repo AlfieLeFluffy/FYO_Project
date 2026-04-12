@@ -10,15 +10,26 @@ config_version=5
 
 [application]
 
-config/name="Hubble Webb Visualization"
-run/main_scene="uid://8yaf13ad4mr"
+config/name="Space Telescope Visualization"
+run/main_scene="uid://c5ntnnq0oqllk"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://djodquheoj5cj"
+
+[autoload]
+
+Globals="*uid://hr1qaymbrox8"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=2
+window/size/initial_position_type=0
+window/size/initial_position=Vector2i(100, 100)
+
+[global_group]
+
+UI=""
 
 [input]
 
@@ -34,7 +45,12 @@ zoom_out={
 }
 rotate={
 "deadzone": 0.2,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(268, 20),"global_position":Vector2(277, 68),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":4,"position":Vector2(475, 8),"global_position":Vector2(484, 56),"factor":1.0,"button_index":3,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+move_camera_rig={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(335, 19),"global_position":Vector2(344, 67),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 

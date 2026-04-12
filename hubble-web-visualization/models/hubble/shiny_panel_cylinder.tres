@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jpmfivriebry"]
+
+[ext_resource type="Texture2D" uid="uid://3ajf0k2agw13" path="res://models/hubble/Hubble_hubble_tex_03.png" id="1_btu7p"]
+
+[resource]
+resource_name = "shiny_panel_cylinder"
+albedo_texture = ExtResource("1_btu7p")
+metallic = 1.0
+roughness = 0.3
+emission_enabled = true

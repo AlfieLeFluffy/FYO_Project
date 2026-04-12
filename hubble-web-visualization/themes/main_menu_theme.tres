@@ -1,0 +1,69 @@
+[gd_resource type="Theme" format=3 uid="uid://c5d1i7dl65uae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nccvq"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.39308554, 0.3930855, 0.39308548, 1)
+border_width_left = 2
+border_width_top = 2
+corner_radius_bottom_right = 8
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45xvp"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
+border_width_left = 2
+border_width_top = 2
+corner_radius_bottom_right = 8
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cer0e"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.10747976, 0.10747973, 0.10747973, 1)
+border_width_left = 2
+border_width_top = 2
+corner_radius_bottom_right = 8
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhw38"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.39308554, 0.3930855, 0.39308548, 1)
+border_width_left = 2
+border_width_top = 2
+corner_radius_bottom_right = 8
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75k1g"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
+border_width_left = 2
+corner_radius_bottom_right = 8
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[resource]
+default_font_size = 24
+MenuBar/styles/hover = SubResource("StyleBoxFlat_nccvq")
+MenuBar/styles/normal = SubResource("StyleBoxFlat_45xvp")
+MenuBar/styles/pressed = SubResource("StyleBoxFlat_cer0e")
+PopupMenu/font_sizes/font_size = 18
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_hhw38")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_75k1g")

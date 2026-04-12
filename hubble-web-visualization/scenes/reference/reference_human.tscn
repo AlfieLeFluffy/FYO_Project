@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://tvjc3y4ldhqt"]
+
+[ext_resource type="PackedScene" uid="uid://ceingpsercatv" path="res://models/reference/human/CCO_Male_base_mesh_standing.blend" id="1_am0r4"]
+
+[node name="ReferenceHuman" type="Node3D" unique_id=2081590851]
+
+[node name="CCO_Male_base_mesh_standing" parent="." unique_id=163960892 instance=ExtResource("1_am0r4")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+metadata/_edit_group_ = true

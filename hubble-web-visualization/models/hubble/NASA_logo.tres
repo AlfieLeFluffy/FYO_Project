@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckciigiik0plf"]
+
+[ext_resource type="Texture2D" uid="uid://4g7vunxcjpek" path="res://models/hubble/Hubble_hubble_tex_01.png" id="1_akgc1"]
+
+[resource]
+resource_name = "NASA_logo"
+transparency = 4
+albedo_texture = ExtResource("1_akgc1")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wym77vd2w2sd"]
+
+[ext_resource type="Texture2D" uid="uid://y1u3tdi6lop3" path="res://models/hubble/Hubble_hubble_tex_03_8.png" id="1_r0802"]
+
+[resource]
+resource_name = "tex_03"
+albedo_texture = ExtResource("1_r0802")
