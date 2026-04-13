@@ -45,16 +45,16 @@ func _on_view_index_pressed(index: int) -> void:
 			var check = not view_popup.is_item_checked(index)
 			view_popup.set_item_checked(index, check)
 			Globals.S_TOGGLE_INFORMATION_VISIBILITY.emit(check)
-		2:
+		99:
 			var check = not view_popup.is_item_checked(index)
 			view_popup.set_item_checked(index, check)
 			Globals.S_TOGGLE_LIGHT_PATHS_VISIBILITY.emit(check)
-		4:
+		3:
 			%CrossSectionWindow.visible = not %CrossSectionWindow.visible
 			%CrossSectionWindow.set_deferred("position",init_pos_cross)
 			Globals.S_SET_CROSS_SECTION_DISTANCE.emit(8.0)
 			Globals.S_SET_CROSS_SECTION_ANGLE.emit(0.0)
-		5:
+		4:
 			%WaveLengthWindow.visible = not %WaveLengthWindow.visible
 			%WaveLengthWindow.set_deferred("position",init_pos_wave)
 

@@ -6,11 +6,11 @@ Project for the Fyzikální Optika (FYO25/26) on the topic of the Hubble and Jam
 
 The project is per assignment split into:
 
-- Visualization in folder `hubble_webb_visualization`
+- Visualization in folder `hubble-webb-visualization`
 - Paper in folder `paper`
 - Presentation in folder `presentation`
 
-The visualization was crated using the Godot 4.6 game engine. The exported `.exe` file can be found within the `release` sections.
+The visualization was crated using the Godot 4.6 game engine. The exported `.exe` file can be found within the `releases` sections.
 
 The paper was created using LATEX on the cloude platform Overleaf. The compilation of the final PDF was used the same platform and thus might not compile on external tools.
 

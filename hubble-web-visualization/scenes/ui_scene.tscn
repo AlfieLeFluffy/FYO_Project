@@ -101,7 +101,7 @@ item_2/text = "James Webb"
 item_2/id = 2
 
 [node name="View" type="PopupMenu" parent="MainMenu" unique_id=2003731691]
-item_count = 6
+item_count = 5
 item_0/text = "References"
 item_0/checkable = 1
 item_0/checked = true
@@ -110,15 +110,12 @@ item_1/text = "Information"
 item_1/checkable = 1
 item_1/checked = true
 item_1/id = 1
-item_2/text = "Light Paths"
-item_2/checkable = 1
-item_2/id = 2
-item_3/id = 3
-item_3/separator = true
-item_4/text = "Cross-Section"
-item_4/id = 4
-item_5/text = "Wavelength"
-item_5/id = 5
+item_2/id = 3
+item_2/separator = true
+item_3/text = "Cross-Section"
+item_3/id = 4
+item_4/text = "Wavelength"
+item_4/id = 5
 
 [node name="CrossSectionWindow" type="Window" parent="." unique_id=1325548252]
 unique_name_in_owner = true
