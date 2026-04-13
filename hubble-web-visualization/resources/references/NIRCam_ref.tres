@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://cftmnuyqskxeh"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_wchga"]
+
+[resource]
+script = ExtResource("1_wchga")
+ref_name = "NIRCam"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.4[/b]
+The Near Infra-Red Camera is the main imaging devince, but can also do some of the basic functions of other instruments. 
+It uses a dichroic beam splitter to split incoming light into two beams, depending on their wavelength. For the smaller wavelenght it uses 8 smaller sensors setup in two grids of4, while the longer wave lenghts get captured on 2 sensors, each the size of one group of smaller sensors."
+wavelength_low = 600.0
+wavelength_high = 5000.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

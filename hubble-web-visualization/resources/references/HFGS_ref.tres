@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://de1sa2n0qq8th"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_pdvey"]
+
+[resource]
+script = ExtResource("1_pdvey")
+ref_name = "Wide Field Camera 3"
+ref_desc = "[b][color=light_blue]Section:[/color] 3.6[/b]
+The FGS, are three sensors that have the task of feeding information into the guidance system, which in turn can make minor adjustments to carry out observation of both stationary and moving objects.
+In essence the sensors have the ability to move/adjust the optical axis of the telescope."
+wavelength_low = 75.0
+wavelength_high = 605.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

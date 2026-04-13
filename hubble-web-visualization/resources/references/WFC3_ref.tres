@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://d0fkvb876108r"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_8b7u4"]
+
+[resource]
+script = ExtResource("1_8b7u4")
+ref_name = "Wide Field Camera 3"
+ref_desc = "[b][color=light_blue]Section:[/color] 3.3[/b]
+The WFC3 is, unlike the name suggest, a fourth genenration instrument onboard. It has two main channels for visible light and infra-red light and is one of the only deviced that can work with IR light."
+wavelength_low = 200.0
+wavelength_high = 1700.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

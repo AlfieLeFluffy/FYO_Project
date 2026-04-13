@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://bmv04qnvqnnum"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_h7m6c"]
+
+[resource]
+script = ExtResource("1_h7m6c")
+ref_name = "Toggle ISIM Visibility"
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

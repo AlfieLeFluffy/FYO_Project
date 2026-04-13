@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://dbggol7yd32xa"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_nwlc8"]
+
+[resource]
+script = ExtResource("1_nwlc8")
+ref_name = "Secondary Mirror"
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

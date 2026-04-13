@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://y3pe58f50a2o"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_21p4n"]
+
+[resource]
+script = ExtResource("1_21p4n")
+ref_name = "NIRSpec"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.6[/b]
+The Near Infra-Red Spectrograph is the main spectrograph onboard. Unlike other systems that are able to do so, the NIRSpec is the only instrument to not be able to do imaging. It can use both slit-less and fixed slit types with a rather large FOV."
+wavelength_low = 600.0
+wavelength_high = 5300.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

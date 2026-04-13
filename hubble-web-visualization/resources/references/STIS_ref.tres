@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://8kwc6e1sj63m"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_4q7uc"]
+
+[resource]
+script = ExtResource("1_4q7uc")
+ref_name = "Space Telescope Imaging Spectrograph"
+ref_desc = "[b][color=light_blue]Section:[/color] 3.4[/b]
+The STIS is multifunctional spectrograph that uses a combination of sensors (one CCD and two MAMA) and is the complement to COS.
+Where the COS deals with UV the STIS deals with everything else."
+wavelength_low = 115.0
+wavelength_high = 1030.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

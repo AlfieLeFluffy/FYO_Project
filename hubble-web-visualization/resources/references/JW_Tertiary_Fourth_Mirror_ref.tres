@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://mjkk00owmr6k"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_vumvx"]
+
+[resource]
+script = ExtResource("1_vumvx")
+ref_name = "Tertiary and Fourth Mirror"
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

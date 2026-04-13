@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://lt14ynueoaiy"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_m0juy"]
+
+[resource]
+script = ExtResource("1_m0juy")
+ref_name = "Heatshields"
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

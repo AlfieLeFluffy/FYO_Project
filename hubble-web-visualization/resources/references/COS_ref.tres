@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://od65e27hqwxk"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_yyree"]
+
+[resource]
+script = ExtResource("1_yyree")
+ref_name = "Cosmic Origins Spectrograph"
+ref_desc = "[b][color=light_blue]Section:[/color] 3.5[/b]
+The COS is an ultra-violet spectroscope with low FOV used to observe large cosmic structures.
+It has two separate sensors for near-UV and far-UV. Only one sensor can be used at a time and the difraction used to create the spectral analysis is done through gratings."
+wavelength_low = 90.0
+wavelength_high = 320.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

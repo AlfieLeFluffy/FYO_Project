@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://dvx3pgdraoujm"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_faf4e"]
+
+[resource]
+script = ExtResource("1_faf4e")
+ref_name = "Secondary Mirror"
+ref_desc = "[b][color=light_blue]Section:[/color] 3.1[/b]
+The second mirror is a hyperbolic mirror with the same alluminium and magnesium fluoride coating as the primary mirror. It is 30.5cm in diameter."
+wavelength_low = 110.0
+wavelength_high = 1100.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

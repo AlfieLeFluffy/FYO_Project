@@ -3,23 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://bqb1lay6k1qax" path="res://models/webb/scene.gltf" id="1_w7ove"]
 [ext_resource type="Script" uid="uid://wfoh0i43rgnd" path="res://scripts/model_controller.gd" id="2_abbiu"]
 [ext_resource type="Script" uid="uid://dfdkuksi32k3c" path="res://scripts/ui_reference.gd" id="2_p8msp"]
-[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="3_abbiu"]
+[ext_resource type="Resource" uid="uid://bmv04qnvqnnum" path="res://resources/references/JW_Toggle_ISIM_ref.tres" id="4_5dk8q"]
+[ext_resource type="Resource" uid="uid://y3pe58f50a2o" path="res://resources/references/NIRSpec_ref.tres" id="5_yut8g"]
+[ext_resource type="Resource" uid="uid://dfmmw7wbfm4p2" path="res://resources/references/MIRI_ref.tres" id="6_wwaew"]
+[ext_resource type="Resource" uid="uid://cftmnuyqskxeh" path="res://resources/references/NIRCam_ref.tres" id="7_wwqr4"]
+[ext_resource type="Resource" uid="uid://dctvndrmwi5et" path="res://resources/references/NIRISS_ref.tres" id="8_5wcy1"]
 
 [sub_resource type="PointMesh" id="PointMesh_abbiu"]
 
-[sub_resource type="Resource" id="Resource_5dk8q"]
-script = ExtResource("3_abbiu")
-ref_name = "Toggle ISIT Visibility"
-metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
-
-[sub_resource type="Resource" id="Resource_p8msp"]
-script = ExtResource("3_abbiu")
-ref_name = "Test"
-ref_desc = "Test"
-metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8msp"]
-size = Vector3(7.775635, 7.875244, 0.18359375)
+size = Vector3(1.5803223, 1.3186035, 0.18359375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wwqr4"]
+size = Vector3(7.338135, 8.30835, 0.18359375)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb01q"]
 resource_name = "JWST-TopReflector"
@@ -62,39 +58,69 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gh08b")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_abbiu"]
-size = Vector3(15.9729, 0.33984375, 21.304688)
+size = Vector3(12.970947, 0.33984375, 19.52539)
 
 [node name="Sketchfab_Scene" unique_id=1958385789 node_paths=PackedStringArray("cutplane", "collision_shapes") instance=ExtResource("1_w7ove")]
 script = ExtResource("2_abbiu")
 cutplane = NodePath("CutPlane")
-collision_shapes = [NodePath("Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_10/StaticBody3D/CollisionShape3D"), NodePath("Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_36/StaticBody3D/CollisionShape3D")]
+collision_shapes = [NodePath("Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_10/StaticBody3D/CollisionShape3D"), NodePath("Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_36/StaticBody3D/CollisionShape3D"), NodePath("Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_7/StaticBody3D/CollisionShape3D")]
 
 [node name="CutPlane" type="MeshInstance3D" parent="." index="0" unique_id=1443280137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 visible = false
 mesh = SubResource("PointMesh_abbiu")
 
-[node name="UIReference" type="Node3D" parent="." index="1" unique_id=1220016886 node_paths=PackedStringArray("ref_target")]
+[node name="ToggleISIMVisibilitReference" type="Node3D" parent="." index="1" unique_id=1220016886 node_paths=PackedStringArray("ref_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9609823, -2.6709366)
 script = ExtResource("2_p8msp")
 ref_type = 1
-ref_resource = SubResource("Resource_5dk8q")
-ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), NodePath("../UIReference2")]
+ref_resource = ExtResource("4_5dk8q")
+ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), NodePath("../NIRSpecReference"), NodePath("../MIRIReference"), NodePath("../NIRCamReference"), NodePath("../NIRISSReference")]
 metadata/_custom_type_script = "uid://dfdkuksi32k3c"
 
-[node name="UIReference2" type="Node3D" parent="." index="2" unique_id=1963292230 node_paths=PackedStringArray("ref_target")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9609823, -0.5178189)
+[node name="NIRSpecReference" type="Node3D" parent="." index="2" unique_id=1963292230 node_paths=PackedStringArray("ref_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9972982, 3.5087824, -0.13714904)
 visible = false
 script = ExtResource("2_p8msp")
-ref_resource = SubResource("Resource_p8msp")
+ref_resource = ExtResource("5_yut8g")
 ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), null]
 metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="MIRIReference" type="Node3D" parent="." index="3" unique_id=1644637232 node_paths=PackedStringArray("ref_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1985343, 3.5087824, -0.13714904)
+visible = false
+script = ExtResource("2_p8msp")
+ref_resource = ExtResource("6_wwaew")
+ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), null]
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="NIRCamReference" type="Node3D" parent="." index="4" unique_id=2019397213 node_paths=PackedStringArray("ref_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20662224, 4.230625, 0.018811703)
+visible = false
+script = ExtResource("2_p8msp")
+ref_resource = ExtResource("7_wwqr4")
+ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), null]
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="NIRISSReference" type="Node3D" parent="." index="5" unique_id=1154562572 node_paths=PackedStringArray("ref_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09634477, 2.054459, 0.018811703)
+visible = false
+script = ExtResource("2_p8msp")
+ref_resource = ExtResource("8_5wcy1")
+ref_target = [NodePath("../Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_8"), null]
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_7" parent_id_path=PackedInt32Array(598925937) index="0" unique_id=2077271277]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_7/StaticBody3D" index="0" unique_id=353489187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4856455, 8.501977)
+shape = SubResource("BoxShape3D_p8msp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_10" parent_id_path=PackedInt32Array(801894819) index="0" unique_id=1803506006]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_10/StaticBody3D" index="0" unique_id=748475871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4856455, 1.3216945)
-shape = SubResource("BoxShape3D_p8msp")
+shape = SubResource("BoxShape3D_wwqr4")
 
 [node name="Object_23" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2" parent_id_path=PackedInt32Array(3623271) index="19" unique_id=228365602]
 mesh = SubResource("ArrayMesh_p8msp")
@@ -102,5 +128,5 @@ mesh = SubResource("ArrayMesh_p8msp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_36" parent_id_path=PackedInt32Array(2045800985) index="0" unique_id=354108094]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/JWST-2016-with-instruments_2/Object_36/StaticBody3D" index="0" unique_id=737203987]
-transform = Transform3D(1, 0, 0, 0, 0.9899695, -0.14128137, 0, 0.14128137, 0.9899695, 0, -0.28780842, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97866344, -0.20546977, 0, 0.20546977, 0.97866344, 0, -0.18395458, 0.8706664)
 shape = SubResource("BoxShape3D_abbiu")

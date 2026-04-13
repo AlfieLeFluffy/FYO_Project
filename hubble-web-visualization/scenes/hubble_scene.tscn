@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://blt4n3trbgiak" path="res://models/hubble/hubble_inhereted.tscn" id="2_314wi"]
 [ext_resource type="Script" uid="uid://dfdkuksi32k3c" path="res://scripts/ui_reference.gd" id="3_uj1ad"]
 [ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="4_jo82m"]
+[ext_resource type="Resource" uid="uid://dmamgtsxfqscj" path="res://resources/references/ACS_res.tres" id="5_7dd3f"]
+[ext_resource type="Resource" uid="uid://bfpju042enk87" path="res://resources/references/H_Primary_Mirror_ref.tres" id="5_oygru"]
+[ext_resource type="Resource" uid="uid://od65e27hqwxk" path="res://resources/references/COS_ref.tres" id="6_f7acq"]
+[ext_resource type="Resource" uid="uid://dvx3pgdraoujm" path="res://resources/references/H_Second_Mirror_ref.tres" id="6_gjihw"]
+[ext_resource type="Resource" uid="uid://8kwc6e1sj63m" path="res://resources/references/STIS_ref.tres" id="7_f7acq"]
+[ext_resource type="Resource" uid="uid://d0fkvb876108r" path="res://resources/references/WFC3_ref.tres" id="8_4invs"]
+[ext_resource type="Resource" uid="uid://de1sa2n0qq8th" path="res://resources/references/HFGS_ref.tres" id="9_0c0b1"]
 
 [sub_resource type="Resource" id="Resource_7dd3f"]
 script = ExtResource("4_jo82m")
@@ -13,24 +20,6 @@ wavelength_low = 90.0
 wavelength_high = 2400.0
 metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
 
-[sub_resource type="Resource" id="Resource_0nx12"]
-script = ExtResource("4_jo82m")
-ref_name = "Secondary Mirror"
-ref_desc = "The secondary mirror is small."
-metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
-
-[sub_resource type="Resource" id="Resource_jo82m"]
-script = ExtResource("4_jo82m")
-ref_name = "Advanced Camera for Surveys"
-ref_desc = "The ACS is the third generation (older) camera instrument currently on board, being installed in 2002 and serviced only partially since. It contains two main opti-
-cal paths and three main detectors with specific sensor, resolutions, and FOV information contained in table 2. The first path is the Wide Field Channel that uses
-a CCD sensors and is used for imaging in visible to near-IR light. The second path contains two separate sensors, the Solar Blind Channel detector and the High
-Resolution Channel detector. The HRC like the WFC used a CCD sensor, but with different resolutions and FOV, but unfortunately this channel is currently non-
-functional and it will most probably remain this way."
-wavelength_low = 115.0
-wavelength_high = 1100.0
-metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
-
 [node name="HubbleNode" type="Node3D" unique_id=723321432]
 script = ExtResource("1_314wi")
 modelname = "Hubble"
@@ -38,12 +27,37 @@ ref_resourece = SubResource("Resource_7dd3f")
 
 [node name="HubbleInhereted" parent="." unique_id=1247401631 instance=ExtResource("2_314wi")]
 
-[node name="UIReference" type="Node3D" parent="." unique_id=365113430]
+[node name="PrimaryMirrorRef" type="Node3D" parent="." unique_id=1629632665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8641961, -0.6)
+script = ExtResource("3_uj1ad")
+ref_resource = ExtResource("5_oygru")
+
+[node name="SecondaryMirrorRef" type="Node3D" parent="." unique_id=365113430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7358038, 0)
 script = ExtResource("3_uj1ad")
-ref_resource = SubResource("Resource_0nx12")
+ref_resource = ExtResource("6_gjihw")
 
-[node name="UIReference2" type="Node3D" parent="." unique_id=1658612256]
+[node name="ACSRef" type="Node3D" parent="." unique_id=1658612256]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8736814, -4.2229567, -1.8671427)
 script = ExtResource("3_uj1ad")
-ref_resource = SubResource("Resource_jo82m")
+ref_resource = ExtResource("5_7dd3f")
+
+[node name="COSRef" type="Node3D" parent="." unique_id=190576671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7736814, -4.2229567, 1.6328573)
+script = ExtResource("3_uj1ad")
+ref_resource = ExtResource("6_f7acq")
+
+[node name="STISRef" type="Node3D" parent="." unique_id=2049314362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9263188, -4.2229567, 1.4328573)
+script = ExtResource("3_uj1ad")
+ref_resource = ExtResource("7_f7acq")
+
+[node name="WFC3Ref" type="Node3D" parent="." unique_id=1729042875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9263188, -4.2229567, -1.5671427)
+script = ExtResource("3_uj1ad")
+ref_resource = ExtResource("8_4invs")
+
+[node name="FGSRef" type="Node3D" parent="." unique_id=1759056237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.073681235, -2.3229566, -2.5671427)
+script = ExtResource("3_uj1ad")
+ref_resource = ExtResource("9_0c0b1")

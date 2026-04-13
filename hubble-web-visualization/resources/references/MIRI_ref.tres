@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://dfmmw7wbfm4p2"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_lmjee"]
+
+[resource]
+script = ExtResource("1_lmjee")
+ref_name = "MIRI"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.3[/b]
+The Mid Infra-Red Instrument is a multifunction instrument that work with mid infra-red light. As other insturment only work in near IR, the MIRI is covering most of the functionalities of others within mid IR. From imaging and coronography to spectrography."
+wavelength_low = 500.0
+wavelength_high = 2800.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"
