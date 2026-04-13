@@ -30,7 +30,7 @@ Both telescopes use mirror-based optical telescope assemblies that share some co
 \clearpage
 \section{Hubble Optic System}
 
-The HST is a Ritchey-Chrétien Cassegrain type telescope capable of observing/recording light in the range of $100$ to $2500nm$ with a maximum surface error of $10nm$ ($\frac{1}{65}$ of the bottom edge of visible light). This range gives the HST the ability to work in visible, near-ultraviolet, and infrared spectrums, which is reflected in the equipment that HST uses for observations. The main observation instruments that the HST uses are:
+The HST is a Ritchey-Chrétien Cassegrain type telescope capable of observing/recording light in the range of $100$ to $2500nm$ with a maximum surface error of $10nm$ ($\frac{1}{65}$ of the bottom edge of visible light). This range gives the HST the ability to work in visible, near-ultraviolet, and near-infrared spectrums, which is reflected in the equipment that HST uses for observations. The main observation instruments that the HST uses are:
 
 \begin{itemize}
     \item Advanced Camera for Surveys (ACS, 2002)
@@ -74,16 +74,16 @@ The first path is the Wide Field Channel that uses a CCD sensors and is used for
 
 \begin{Note}{CCD Detector}{fermat}
     \label{thm:ccd}
-    A charge-coupled device uses a a photoactive area and a 2D array of linked capacitors to capture images. These capacitors are linked in columns and form shift registers. All shift registers are connected to another perpendicular shift register. 
+    A \textbf{Charge-Coupled Device} uses a a photoactive area and a 2D array of linked capacitors to capture images. These capacitors are linked in columns and form shift registers. All shift registers are connected to another perpendicular shift register. 
     
     Capturing an image through a CCD sensor is done through exposing the photoactive region, which accumulates charge in each position within the vertical shift registers. These shift registers are subsequently read in series (row-by-row) through the horizontal shift register. All of the registers shift by one each time a row is read, which introduces some transmission issues. 
 \end{Note}
 
-The SBC uses a Multi-Anode Microchannel Array (MAMA) with the same resulution as HRC, but different FOV. 
+The SBC uses a MAMA sensors with the same resulution as HRC, but different FOV. 
 
 \begin{Note}{MAMA Detector}{fermat}
     \label{thm:mama}
-    A Multi-Anode Microchannel Array, commonly referred to as MAMA, is a photon-counting detector array that is used in ground and space telescopes for high-sensitivity, high-resolution, photometrically stable imaging \cite{4331264} in near-UV light.
+    A \textbf{Multi-Anode Microchannel Array}, commonly referred to as MAMA, is a photon-counting detector array that is used in ground and space telescopes for high-sensitivity, high-resolution, photometrically stable imaging \cite{4331264} in near-UV light.
 \end{Note}
 
 Both optical paths contain systems of filters. The first system contains two filter wheels (each wheel contains filters on its edge, and rotating them selects the filter) and is shared between the WFC and HRC sensors. The shared filter system allowed for simultaneous observations on both sensors under specific filter combinations. The second system is only for the SBC sensor and contains only one wheel.
@@ -105,7 +105,7 @@ The second path is the near-infrared channel (IR), which uses a special compound
 
 \begin{Note}{HgCdTe Detector}{fermat}
     \label{thm:hgcdte}
-    HgCdTe detectors use a composite material is a special mixture of CdTe (semiconductor) and HgTe (semimetal) that is sensitive to infrared light at very low temperatures (145K).
+    A \textbf{HgCdTe} detector uses a composite material is a special mixture of CdTe (semiconductor) and HgTe (semimetal) that is sensitive to infrared light at very low temperatures (145K).
 \end{Note}
 
 \subsection{Space Telescope Imaging Spectrograph}
@@ -203,7 +203,7 @@ The JWST is divided into several sections, but in this project the only relevant
 
 \subsection{Optical Telescope Element}
 
-The OTE was created using the \textbf{3-mirror anastigmat} design, which uses 4 mirrors to gather light. It uses a primary mirror, secondary mirror, tertiary mirror, and a fourth flat mirror called the \textbf{fine steering mirror} (FSM), which is the only adjustable mirror used for stabilisation and minor offsets. Basic optical information is described in the following table \ref{tab:jwst_ote_information}.
+The OTE was created using the \textbf{3-mirror anastigmat} design, which uses 4 mirrors to gather light. It uses a primary, secondary, tertiary mirror, and a fourth flat mirror called the \textbf{fine steering mirror} (FSM), which is the only adjustable mirror used for stabilisation and minor offsets. Basic optical information is described in the following table \ref{tab:jwst_ote_information}.
 
 \begin{table}[h]
     \centering
@@ -224,7 +224,7 @@ The most impressive, known, and complex mirror in this optical system is the mai
     \label{fig:jwst_ote_reflectors}
 \end{figure}
 
-Each segment of the mirror has at most $\sim 25 nm$ error, which is only $\frac{1}{15.2}$ of $380nm$, the bottom of the visible light spectrum. Each segment also has 6 actuators attached to the back to allow small adjustments of the spatial angle of $\sim 10nm$ and a seventh actuator to correct any problems created during manufacturing and travel to match the focal length of all 18 segments.
+Each segment of the mirror has at most $\sim 25 nm$ error, which is only $\frac{1}{15.2}$ of $380nm$, the bottom of the visible light spectrum. Each segment also has 6 actuators attached to the back to allow small adjustments to the spatial angle of $\sim 10nm$ and a seventh actuator to correct any problems created during manufacturing and travel to match the focal length of all 18 segments.
 
 The secondary mirror is a convex circular mirror that focuses light towards the tertiary mirror. Both the primary and secondary mirror create a pseudo-cassegrain telescope, which flips the incoming image before it hits the next mirror.
 
@@ -241,7 +241,7 @@ All of these mirrors also have the same maximum error of $\sim 25nm$ as the prim
     \label{fig:jwst_ote_diagram}
 \end{figure}
 
-This setup can create much better results than the one found onboard HST OTA \ref{subsec:hst_ota}, but is also much more complex during construction, setup, and observation. The reason for the number of adjustable parts within the OTE compared to the static approach of OTA is the inability of servicing. The HST is within low-Earth orbit, and regular maintenance missions were possible, which came in handy during the initial issues the HST had that were fixed with corrective optics. The JWST is within the L2 orbit and any maintenance or upgrade missions, at least for the foreseeable future, are impossible, and so any adjustments and fixes must be done remotely.
+This setup can create much better results than the one found onboard the HST OTA \ref{subsec:hst_ota}, but is also much more complex during construction, setup, and observation. The reason for the number of adjustable parts within the OTE compared to the static approach of OTA is the inability of servicing. The HST is within low-Earth orbit, and regular maintenance missions were possible, which came in handy during the initial issues the HST had that were fixed with corrective optics. The JWST is within the L2 orbit and any maintenance or upgrade missions, at least for the foreseeable future, are impossible, and so any adjustments and fixes must be done remotely.
 
 Another thing to keep in mind regarding the OTE is that an expected side-effect of the hexagonal reflector setup is that the observations, especially those done on point light sources, will have artefacts of the hexagonal setup and reflector edges. This is best seen in comparison between images from the HST and the JWST in figure \ref{fig:comparing_jwst_hst}, where a distinct shape around stars looks like the intersection edges of the hexagonal segments.
 
@@ -258,7 +258,7 @@ The ISIM contains 4 multi-purpose instruments (each instrument has 4+ modes), th
 
 As can be seen, most of the instruments work within the infra-red light spectrum, which is used to counter light dispersion that occurs over a long distance of space. Visible light coming in from outer space gets slowly longer and thus shifts into infra-red light, also called a \textit{redshift}. The JWST and other telescopes handle this by capturing light in IR and then processing the data back into a visible light equivalent, thus giving us images such as seen in figure \ref{fig:comparing_jwst_hst}. This is also the reason for the low operating temperature and shielding from any IR that might come from the sun or the rest of the telescope.
 
-Lastly, each instrument within the layout of the focal plane has both an offset and angle offset. These offsets can be seen in figure \ref{fig:jswt_instrument_focal_plane}, which also shows the size of each sensor area and the layout of sensors within an instrument.
+Lastly, each instrument within the focal plane layout has both an offset and an angle offset. These offsets can be seen in figure \ref{fig:jswt_instrument_focal_plane}, which also shows the size of each sensor area and the layout of sensors within an instrument.
 
 \begin{figure}[h]
     \centering
