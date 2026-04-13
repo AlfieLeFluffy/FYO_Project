@@ -5,4 +5,9 @@
 [resource]
 script = ExtResource("1_vumvx")
 ref_name = "Tertiary and Fourth Mirror"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.1[/b]
+The teritary mirror is used to reflext the light back towards the front of the telescope onto the fourth mirror.
+The fourth mirror is also known as the Fine Steering Mirror, which is used to correct any abberations and make minor adjustments during observation."
+wavelength_low = 600.0
+wavelength_high = 28000.0
 metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

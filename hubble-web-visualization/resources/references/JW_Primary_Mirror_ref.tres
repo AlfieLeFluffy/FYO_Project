@@ -5,4 +5,9 @@
 [resource]
 script = ExtResource("1_tpgg0")
 ref_name = "Primary Mirror Segments"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.1[/b]
+The primary mirror setup of Webb is the 3-mirror anastigmat design. This design is simillar to the Cassegrain found on Hubble. Instead of one primary mirror, this design uses 18 separate hexagonal segments made of berylium coated with gold with maximum surface error of around 25nm.
+Each segment has 6 actuators to adjust the segment to fix/calibrate its angle in relation to others and the rest of the mirrors. Segments also have a 7th actuator to fix any issues that might arise within the focal point, by slightly bending the segment."
+wavelength_low = 600.0
+wavelength_high = 28000.0
 metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

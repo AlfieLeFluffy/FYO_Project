@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://bvbadq5nog1il"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_tujd8"]
+
+[resource]
+script = ExtResource("1_tujd8")
+ref_name = "Hubble Space Telescope"
+ref_desc = "[b][color=light_blue]Section:[/color] 3[/b]
+The Hubble Space Telescope was launched into low-Earth orbit in 1990. After some initial troubles with the primary mirror having a manufacturing flaw and many servicing missions it is still operational to this day.
+It uses a Ritchey-Chrétien version of the Cassegrain telescope design with a primary mirror and a secondary mirror, feeding the light through a hole in the primary mirror towards the back of the telescope.
+It contains 4 major instruments, which are:
+• Advanced Camera for Surveys 
+• Wide Field Camera 3
+• Space Telescope Imaging 
+• Cosmic Origins Spectrograph
+The telescope mostly operates in visible light, but can also work in near UV and near IR."
+wavelength_low = 90.0
+wavelength_high = 2400.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

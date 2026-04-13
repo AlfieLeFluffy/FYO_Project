@@ -5,4 +5,9 @@
 [resource]
 script = ExtResource("1_nwlc8")
 ref_name = "Secondary Mirror"
+ref_desc = "[b][color=light_blue]Section:[/color] 4.1[/b]
+The secondary mirror is a convex mirror made of the same materials with same tolerance as the hexaagonal segments of the primary mirror. It has 0.74m diameter.
+Together with the primary mirror they create a psudo-cassegrain telescope setup that is then fed into the tertiary and fourth mirror."
+wavelength_low = 600.0
+wavelength_high = 28000.0
 metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

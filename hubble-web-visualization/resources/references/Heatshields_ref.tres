@@ -4,5 +4,8 @@
 
 [resource]
 script = ExtResource("1_m0juy")
-ref_name = "Heatshields"
+ref_name = "Sunshields"
+ref_desc = "[b][color=light_blue]Section:[/color] 4[/b]
+The five layers of Kapton membrane coated with aluminum for reflectivity designed to keep the mirrors and instruments in really low operating tempratures of only around 40-50K.
+"
 metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

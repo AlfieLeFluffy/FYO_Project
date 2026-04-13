@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="InformationResource" format=3 uid="uid://bgqej84y5k8at"]
+
+[ext_resource type="Script" uid="uid://chyrk1ts4wb7h" path="res://resources/information_resource.gd" id="1_mjvdc"]
+
+[resource]
+script = ExtResource("1_mjvdc")
+ref_name = "James Webb Space Telescope"
+ref_desc = "[b][color=light_blue]Section:[/color] 4[/b]
+The James Webb Space Telescope was launched into L2 orbit in 2021 and began its operation in 2023. It is specifically designed to operate mostly in near IR and mid IR spectrum to counteract redshift dispersion.
+It uses a 3-mirror anastigmat design, which is simillar to Cassegrain design, but uses unconnected 18 hexagonal segments instead of one primary mirror and has two additional mirrors to improve the quality of the observations.
+It contains 4 major instruments, which are:
+• Mid Infrared Instrument (MIRI)
+• Near Infrared Camera (NIRCam)
+• Near Infrared Imager and Slitless Spectrograph (NIRISS)
+• Near Infrared Spectrograph (NIRSpec)
+"
+wavelength_low = 600.0
+wavelength_high = 28500.0
+metadata/_custom_type_script = "uid://chyrk1ts4wb7h"

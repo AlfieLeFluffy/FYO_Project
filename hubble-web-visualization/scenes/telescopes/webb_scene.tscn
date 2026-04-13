@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dp85v5reysrmo"]
+
+[ext_resource type="Script" uid="uid://qq2mxifwv2x5" path="res://scripts/model_node_controller.gd" id="1_tncnk"]
+[ext_resource type="Resource" uid="uid://bgqej84y5k8at" path="res://resources/references/James_Webb_ref.tres" id="2_22pix"]
+[ext_resource type="PackedScene" uid="uid://b3fb31lwv0l5d" path="res://models/webb/webb_inhereted.tscn" id="3_8fsk5"]
+[ext_resource type="Script" uid="uid://dfdkuksi32k3c" path="res://scripts/ui_reference.gd" id="4_378fd"]
+[ext_resource type="Resource" uid="uid://d38hut10etfem" path="res://resources/references/JW_Primary_Mirror_ref.tres" id="5_hw0l4"]
+[ext_resource type="Resource" uid="uid://dbggol7yd32xa" path="res://resources/references/JW_Secondary_Mirror_ref.tres" id="6_hde2y"]
+[ext_resource type="Resource" uid="uid://lt14ynueoaiy" path="res://resources/references/Heatshields_ref.tres" id="7_5e2v5"]
+[ext_resource type="Resource" uid="uid://mjkk00owmr6k" path="res://resources/references/JW_Tertiary_Fourth_Mirror_ref.tres" id="8_26xry"]
+
+[node name="WebbNode" type="Node3D" unique_id=2138413496]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0)
+script = ExtResource("1_tncnk")
+modelname = "Webb"
+ref_resourece = ExtResource("2_22pix")
+
+[node name="WebbInhereted" parent="." unique_id=1958385789 instance=ExtResource("3_8fsk5")]
+
+[node name="PrimaryMirrorSegmentsReference" type="Node3D" parent="." unique_id=1194938808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1243038, 4.6641235, 1.69627)
+script = ExtResource("4_378fd")
+ref_resource = ExtResource("5_hw0l4")
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="SecondaryMirrorReference" type="Node3D" parent="." unique_id=1975178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029128794, 3.4258742, 7.9828053)
+script = ExtResource("4_378fd")
+ref_resource = ExtResource("6_hde2y")
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="HeatshieldsReference" type="Node3D" parent="." unique_id=1337812260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3540386, -0.27412626, 7.9828053)
+script = ExtResource("4_378fd")
+ref_resource = ExtResource("7_5e2v5")
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"
+
+[node name="TertiaryFourthMirrorReference" type="Node3D" parent="." unique_id=1581074601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029128794, 3.4258742, 2.0664437)
+script = ExtResource("4_378fd")
+ref_resource = ExtResource("8_26xry")
+metadata/_custom_type_script = "uid://dfdkuksi32k3c"

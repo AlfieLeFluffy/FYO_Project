@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cvq20a24fthq0"]
 
 [ext_resource type="PackedScene" uid="uid://pxfj7qc12rgj" path="res://scenes/camera_rig.tscn" id="1_adt64"]
-[ext_resource type="PackedScene" uid="uid://dp85v5reysrmo" path="res://scenes/webb_scene.tscn" id="1_tgljk"]
+[ext_resource type="PackedScene" uid="uid://dp85v5reysrmo" path="res://scenes/telescopes/webb_scene.tscn" id="1_tgljk"]
 [ext_resource type="Script" uid="uid://bjjaiev5kivwo" path="res://scripts/pedestal_view_controller.gd" id="1_xqrev"]
-[ext_resource type="PackedScene" uid="uid://dkwulegauj0wa" path="res://scenes/hubble_scene.tscn" id="2_iuu4v"]
+[ext_resource type="PackedScene" uid="uid://dkwulegauj0wa" path="res://scenes/telescopes/hubble_scene.tscn" id="2_iuu4v"]
 [ext_resource type="PackedScene" uid="uid://dekdhtk4sfuc" path="res://models/platform/platform.glb" id="2_l1lag"]
 [ext_resource type="Environment" uid="uid://bivv4g2metxle" path="res://textures/skybox/space_skybox.tres" id="4_o0la1"]
 [ext_resource type="PackedScene" uid="uid://b1a2wdbdvssgo" path="res://scenes/ui_scene.tscn" id="8_0m80h"]
